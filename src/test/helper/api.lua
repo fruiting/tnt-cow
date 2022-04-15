@@ -1,0 +1,17 @@
+--local t = require("luatest")
+--local shared = require("test.helper")
+--local helper = { shared = shared }
+--
+--t.before_suite(function()
+--    box.cfg({
+--        listen = shared.port,
+--        memtx_dir = shared.datadir,
+--        memtx_memory = 256 * 1024 * 1024, -- укажите необходимой объем памяти (в байтах) для запуска тестов
+--        wal_dir = shared.datadir,
+--    })
+--    local migrator = require("migrator")
+--    migrator.migrate(require("migrations"))
+--    API = require("api")
+--end)
+--
+--return helper

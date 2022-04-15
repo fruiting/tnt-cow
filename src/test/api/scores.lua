@@ -1,0 +1,17 @@
+--local t = require("luatest")
+--local g = t.group("scores_api")
+--local game_id = "123"
+--local name = "Roman"
+--local score = 50
+--local expires_at = 1634204874
+--
+--g.test_scores_set_v1 = function()
+--    local result = API.scores.set.v1(game_id, name, score, expires_at)
+--
+--    t.assert_equals(result, nil, "test_scores_set_v1 success")
+--end
+--
+--g.after_each(function()
+--    local model = require("model.scores")
+--    box.space[model.space_name]:truncate()
+--end)

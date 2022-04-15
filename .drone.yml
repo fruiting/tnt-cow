@@ -1,7 +1,6 @@
 pipeline:
   publish-api-docker:
     image: plugins/docker
-    pull: always
     settings:
       repo: romaspirin/tnt-cow
       username:

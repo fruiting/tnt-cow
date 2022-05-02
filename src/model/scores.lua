@@ -29,3 +29,16 @@ function model.set(game_id, name, score, expires_at)
 
     box.space[model.space_name]:replace({ game_id, name, score, expires_at })
 end
+
+--- Returns player's score
+--- @param game_id string Game id
+--- @param name string Player name
+--- @return table
+function model.get(game_id, name)
+    assert(type(game_id) == "string", "game_id should be string")
+    assert(type(name) == "string", "name should be string")
+
+    return box.space[model.space_name].index[model.index.game_id]:select({ game_id })
+end
+
+return model
